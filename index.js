@@ -37,6 +37,14 @@ bot.on('message', function(message) {
   }
 });
 
+bot.on('start', function(){
+  var params = {
+        icon_emoji: ':cat:'
+    };
+  // define existing username instead of 'user_name'
+  bot.postMessageToUser('ccjons1', 'meow!', params);
+});
+
 function getUserById(id) {
   return bot.users.filter(function(user) {
     return user.id == id;
